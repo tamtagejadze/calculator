@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <input id="outPutData" type="text" placeholder="0">
+        <div class="content">
+            <div class="row">
+                <div class="colomn">
+                    <button class="btn" id="off" onclick="off()">OFF</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="operation-data" onclick="percent('%')">%</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="operation-data" onclick="squareRoot('√')">√</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="delete" onclick="deleteAll()">C</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="delete-all" onclick="deleteNumber()">AC</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colomn">
+                    <button class="btn" id="mrc" onclick="shawNumber()">MRC</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(7)">7</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(4)">4</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(1)">1</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(0)">0</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colomn">
+                    <button class="btn" id="operation-data" onclick="shawNumber()">M-</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(8)">8</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(5)">5</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(2)">2</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="dot" onclick="shawNumber('.')">.</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colomn">
+                    <button class="btn" id="operation-data" onclick="shawNumber()">M+</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(9)">9</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(6)">6</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="number-btn" onclick="shawNumber(3)">3</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="equals-operation" onclick="calculate()">=</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="colomn">
+                    <button class="btn" id="operation-data" onclick="shawNumber('/')">/</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="operation-data" onclick="shawNumber('*')">*</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn" id="operation-data" onclick="shawNumber('-')">-</button>
+                </div>
+                <div class="colomn">
+                    <button class="btn-addition" id="operation-data" onclick="shawNumber('+')">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        var display = document.getElementById('outPutData')
+
+        function shawNumber(number){
+            display.value += number
+        }
+
+        function deleteAll(){
+            display.value = ""
+        }
+        function deleteNumber(){
+            display.value = display.value.slice(0,-1)
+        }
+        function calculate(){
+            display.value = eval(display.value)
+            setTimeout(function(){
+                display.value = ""
+            },1000)
+        }
+        function squareRoot(){
+            display.value = Math.sqrt(display.value)
+        }
+
+    </script>
+</body>
+</html>

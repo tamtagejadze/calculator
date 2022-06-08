@@ -1,0 +1,84 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 470px;
+    margin-left: 35%;
+    margin-top: 50px;
+    background-color: rgb(26, 25, 25);
+    border-radius: 15px;
+    border: 5px solid rgb(49, 48, 48);
+    
+    -moz-box-shadow: 10px 10px 16px #797777;
+    -webkit-box-shadow: 10px 10px 16px #797777;
+    box-shadow: 10px 10px 16px #797777;
+}
+#outPutData{
+    width: 80%;
+    height: 70px;
+    margin-left: 10%;
+    margin-top: 40px;
+    border: 3px solid grey;
+    border-radius: 5px;
+    background-color: rgb(224, 243, 236);
+    display: flex;
+    text-align: end;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+    width: 80%;
+    margin-left: 10%;    
+}
+.row{
+    flex-direction: column;
+    width: 18%;
+    margin-left: 3%;
+}
+.btn{
+    width: 95%;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #c0baba;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #5e5c5c;
+    font-size: 15px;
+    cursor: pointer;
+}
+#delete,
+#delete-all{
+    background-color: rgb(219, 9, 9);
+    border: 1px solid rgb(243, 53, 53);
+}
+
+#operation-data,
+#off,
+#mrc,
+#equals-operation{
+    background-color: #797777;
+    border: 1px solid #8d8b8b;
+}
+.btn-addition{
+    height: 95px;
+    width: 95%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+    transition: 0.5s ease-in-out;
+}
+
+@media screen and (max-width:600px){
+    .container{
+        width: 60%;
+        margin-left: 20%;
+    }
+}
